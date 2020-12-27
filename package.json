@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/g1ji/4l1cblu3#readme",
   "dependencies": {
-    "websocket": "^1.0.33"
+    "websocket": "^1.0.33",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
   }
 }
