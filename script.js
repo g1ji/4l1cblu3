@@ -90,7 +90,7 @@ function connectSocket() {
     });
     client.connect(socketUrl);
 }
-cron.schedule('1 1 9 * * 1,2,3,4,5', () => {
+cron.schedule('0 0 9 * * 1,2,3,4,5', () => {
     console.log("+++++++++++++connecting")
     connectSocket();
 });
