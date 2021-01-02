@@ -14,3 +14,5 @@ if (cluster.isMaster) {
     require('./app');
     require('./script');
 }
+// https://g1ji-webhook.herokuapp.com/ | https://git.heroku.com/g1ji-webhook.git
+// eroku logs --tail
