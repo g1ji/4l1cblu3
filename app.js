@@ -1,11 +1,12 @@
-const Express = require('express');
-const app = Express();
-var serveIndex = require('serve-index');
+const cool = require('cool-ascii-faces');
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 5000;
+const serveIndex = require('serve-index');
 
-app.use(Express.static(__dirname + "/"))
+app.use(express.static(__dirname + "/"))
 app.use('/mkt', serveIndex(__dirname + '/mkt', {'icons': true}));
 
+app.get('/', (req, res) => res.send(cool()));
 
-app.listen(3000, function () {
-    console.log(`==> ${new Date()} Server is running at http://localhost:${3000}/`);
-});
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
